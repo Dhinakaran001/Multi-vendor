@@ -14,14 +14,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "../../style/CssStyle/index.css";
 import { NavLink } from "react-router-dom";
 // import SwipeableViews from "react-swipeable-views";
-import Carousel from "react-material-ui-carousel"
-import {
-  HeaderBox,
-  HeaderContent,
-  HeaderImage,
-  HeaderSmallText,
-  HeaderText,
-} from "../../style/HomeStyle";
+import Carousel from "react-material-ui-carousel";
 import Footer from "./Footer";
 import Aos from "aos";
 import { useTheme } from "@emotion/react";
@@ -31,40 +24,47 @@ import SuperMarket from "./SuperMart";
 
 const mainCard = [
   {
-    img: "https://res.cloudinary.com/dkz3uzlnp/image/upload/v1664775424/food-multi/pexels-carlo-martin-alcordo-2449665_pjjlcn.jpg",
+    img:
+      "https://res.cloudinary.com/dkz3uzlnp/image/upload/v1664775424/food-multi/pexels-carlo-martin-alcordo-2449665_pjjlcn.jpg",
     name: "Bulk Orders",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae optio consequuntur ut sit facilis ab accusantium culpa.",
+    body:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae optio consequuntur ut sit facilis ab accusantium culpa.",
   },
   {
-    img: "https://res.cloudinary.com/dhina/image/upload/v1664781127/waycool/pexels-pixabay-264537_cfc8o5.jpg",
+    img:
+      "https://res.cloudinary.com/dhina/image/upload/v1664781127/waycool/pexels-pixabay-264537_cfc8o5.jpg",
     name: "Online order",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae optio consequuntur ut sit facilis ab accusantium culpa.",
+    body:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae optio consequuntur ut sit facilis ab accusantium culpa.",
   },
   {
-    img: "https://res.cloudinary.com/dkz3uzlnp/image/upload/v1664775684/food-multi/packaged-food-brands_rc0fzl.png",
+    img:
+      "https://res.cloudinary.com/dkz3uzlnp/image/upload/v1664775684/food-multi/packaged-food-brands_rc0fzl.png",
     name: "Delivery",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae optio consequuntur ut sit facilis ab accusantium culpa.",
+    body:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae optio consequuntur ut sit facilis ab accusantium culpa.",
   },
 ];
 
 const service = [
   {
-    img: "https://res.cloudinary.com/dhina/image/upload/v1661316293/ProjectImage/easy-del_bhwjjr.jpg",
+    img:
+      "https://res.cloudinary.com/dhina/image/upload/v1661316293/ProjectImage/easy-del_bhwjjr.jpg",
     name: "Easy To Order",
   },
   {
-    img: "https://res.cloudinary.com/dhina/image/upload/v1661316292/ProjectImage/fast-del_yyried.jpg",
+    img:
+      "https://res.cloudinary.com/dhina/image/upload/v1661316292/ProjectImage/fast-del_yyried.jpg",
     name: "Fast Delivery",
   },
   {
-    img: "https://res.cloudinary.com/dhina/image/upload/v1661316318/ProjectImage/Quality-del_kcizk7.jpg",
+    img:
+      "https://res.cloudinary.com/dhina/image/upload/v1661316318/ProjectImage/Quality-del_kcizk7.jpg",
     name: "Best Quality",
   },
 ];
 
 // const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
-
 
 const images = [
   {
@@ -113,9 +113,9 @@ function Home() {
     <>
       {isLogged ? null : (
         <Box sx={{ paddingTop: "80px" }}>
-          <Grid container sx={{display: 'block'}}>
+          <Grid container sx={{ display: "block" }}>
             <Grid item md={12} lg={12} sm={12}>
-            <Carousel
+              <Carousel
                 axis={theme.direction === "rtl" ? "x-reverse" : "x"}
                 index={activeStep}
                 onChangeIndex={handleStepChange}
@@ -262,10 +262,9 @@ function Home() {
       )}
       {isUser ? (
         <Box sx={{ paddingTop: "80px" }}>
-          <Grid container  sx={{display: 'block'}}>
+          <Grid container sx={{ display: "block" }}>
             <Grid item md={12} lg={12} sm={12}>
-              <Carousel
-              >
+              <Carousel>
                 {images.map((item, index) => (
                   <div key={index}>
                     <Box
@@ -407,9 +406,9 @@ function Home() {
       ) : null}
       {isAdmin ? (
         <Box sx={{ paddingTop: "80px" }}>
-          <Grid container sx={{display: 'block'}}>
+          <Grid container sx={{ display: "block" }}>
             <Grid item md={12} lg={12} sm={12}>
-            <Carousel
+              <Carousel
                 axis={theme.direction === "rtl" ? "x-reverse" : "x"}
                 index={activeStep}
                 onChangeIndex={handleStepChange}
