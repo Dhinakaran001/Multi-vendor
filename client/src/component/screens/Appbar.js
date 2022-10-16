@@ -76,7 +76,7 @@ function Appbar(props) {
   };
 
   const navigate = useNavigate();
-
+  // Drawer
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -247,7 +247,7 @@ function Appbar(props) {
               <MenuIcon style={{ color: "#fff" }} />
             </IconMenu>
 
-            <Box  sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1 }}>
               {isAdmin ? (
                 <NavLink
                   to={`/home`}
